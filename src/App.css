@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 20px); /* Altura mínima de la ventana menos los márgenes */
+  margin: 10px 0; /* Margen de 10px arriba y abajo */
+}
+
+.table-container {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo de la tabla */
+}
+
+.table-bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%; /* Ancho completo de la tabla */
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid black;
+  padding: 8px; /* Agregar padding para mejorar la apariencia */
+  text-align: center; /* Alinear el texto a la izquierda */
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-bordered img {
+  height: auto; /* Mantener la proporción de la imagen */
+}
+
+.habilidades {
+  background-color: rgb(147, 155, 156);
+  width: 20%;
+  height: 61%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px; /* Ajustar el espacio interior */
+  text-align: center; /* Centrar el texto */
+  border-radius: 5px;
+}
+
+.habilidades h2 {
+  margin: 0; /* Eliminar el margen para reducir el espacio entre líneas */
+  font-size: 24px; /* Ajustar el tamaño del texto */
+}
+
+.imgModal {
+  display: block; /* Hacer que la imagen sea un bloque para centrarla */
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+  max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+  width: 65% !important;
+  border: 2px solid aliceblue;
+  border-radius: 10%;
+}
+
+.habilidades h4 {
+  font-weight: normal; /* Eliminar la negrita */
+  margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
+  font-size: 20px; /* Ajustar el tamaño del texto */
+}
+
+.habilidades h3 {
+  font-weight: bold; /* Eliminar la negrita */
+  margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
+  font-size: 22px; /* Ajustar el tamaño del texto */
+}
