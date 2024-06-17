@@ -45,14 +45,15 @@
 
 .habilidades h2 {
   margin: 0; /* Eliminar el margen para reducir el espacio entre líneas */
-  font-size: 24px; /* Ajustar el tamaño del texto */
+  font-size: 100%; /* Ajustar el tamaño del texto */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .imgModal {
   display: block; /* Hacer que la imagen sea un bloque para centrarla */
   margin: 0 auto; /* Centrar la imagen horizontalmente */
   max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
-  width: 65% !important;
+  width: 75% !important;
   border: 2px solid aliceblue;
   border-radius: 10%;
 }
@@ -60,11 +61,13 @@
 .habilidades h4 {
   font-weight: normal; /* Eliminar la negrita */
   margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
-  font-size: 20px; /* Ajustar el tamaño del texto */
+  font-size: 100%; /* Ajustar el tamaño del texto */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .habilidades h3 {
   font-weight: bold; /* Eliminar la negrita */
   margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
-  font-size: 22px; /* Ajustar el tamaño del texto */
+  font-size: 100%; /* Ajustar el tamaño del texto */
+  font-family: Arial, Helvetica, sans-serif;
 }
