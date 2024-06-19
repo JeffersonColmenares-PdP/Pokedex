@@ -1,73 +1,137 @@
+/* Contenedor principal */
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 20px); /* Altura mínima de la ventana menos los márgenes */
-  margin: 10px 0; /* Margen de 10px arriba y abajo */
+  min-height: 100vh; /* Altura completa de la ventana */
+  background-color: #f2f2f2; /* Fondo claro */
+  padding: 20px;
+}
+
+/* Barra de busqueda */
+.container input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botón de búsqueda */
+.container button {
+  background-color: #ffcb05;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #ffbe0b; /
 }
 
 .table-container {
   width: 100%;
-  max-width: 600px; /* Ancho máximo de la tabla */
+  max-width: 800px; /* Ancho máximo de la tabla */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .table-bordered {
-  border: 1px solid black;
   border-collapse: collapse;
   width: 100%; /* Ancho completo de la tabla */
+  border-radius: 10px;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid black;
-  padding: 8px; /* Agregar padding para mejorar la apariencia */
-  text-align: center; /* Alinear el texto a la izquierda */
-  font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ddd;
+  padding: 12px; 
+  text-align: center; 
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.table-bordered th {
+  background-color: #ef5350; 
+  color: white;
+}
+
+.table-bordered tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-bordered tr:hover {
+  background-color: #f1f1f1; 
 }
 
 .table-bordered img {
-  height: auto; /* Mantener la proporción de la imagen */
+  height: 65px; /* Altura imagenes */
+  width: auto; 
+  cursor: pointer; 
 }
 
+/* Estilos del modal */
 .habilidades {
-  background-color: rgb(147, 155, 156);
-  width: 20%;
-  height: 61%;
-  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  padding: 20px;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px; /* Ajustar el espacio interior */
-  text-align: center; /* Centrar el texto */
-  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
 }
 
 .habilidades h2 {
-  margin: 0; /* Eliminar el margen para reducir el espacio entre líneas */
-  font-size: 100%; /* Ajustar el tamaño del texto */
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0;
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  color: #ef5350;
 }
 
 .imgModal {
-  display: block; /* Hacer que la imagen sea un bloque para centrarla */
-  margin: 0 auto; /* Centrar la imagen horizontalmente */
-  max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
-  width: 75% !important;
-  border: 2px solid aliceblue;
+  display: block; 
+  margin: 0 auto; 
+  max-width: 100%; 
+  width: 75%;
+  border: 2px solid #ef5350; 
   border-radius: 10%;
 }
 
 .habilidades h4 {
-  font-weight: normal; /* Eliminar la negrita */
-  margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
-  font-size: 100%; /* Ajustar el tamaño del texto */
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal; 
+  margin: 10px 0; 
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
 }
 
 .habilidades h3 {
-  font-weight: bold; /* Eliminar la negrita */
-  margin: 3px 0; /* Ajustar el margen entre las líneas del texto */
-  font-size: 100%; /* Ajustar el tamaño del texto */
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  margin: 10px 0; 
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+.habilidades button {
+  background-color: #ef5350; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.habilidades button:hover {
+  background-color: #d32f2f; /* Rojo más oscuro */
 }
