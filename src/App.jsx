@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
               let infoLinkPokJs = await infoLinkPok.json();
               pokemonDetalles.push({
                 id: infoLinkPokJs?.id,
-                name: Pokemones?.name,
+                name: infoLinkPokJs?.forms[0]?.name,
                 imagen: infoLinkPokJs?.sprites?.front_default, //imagen del pokemon
                 habilidad0: infoLinkPokJs?.abilities[0]?.ability?.name,
                 habilidad1: infoLinkPokJs?.abilities[1]?.ability?.name
@@ -55,9 +55,9 @@ function App() {
 
   useEffect(() => { fetchMostrarPokemones() }, []);
 
-  const indexOfLastPokemon = currentPage * pokemonsPerPage;
-  const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
-  const currentPokemons = listPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+  const indexOfLastPokemon = currentPage * pokemonsPerPage;//ultimo pokemon en pagina
+  const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;//primer pokemon en pagina
+  const currentPokemons = listPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);//nuevo arreglo con pok x pag
 
   const nextPage = () => {
     if (currentPage < Math.ceil(listPokemons.length / pokemonsPerPage)) {
@@ -71,9 +71,9 @@ function App() {
     }
   };
 
-  const leerInput = useCallback((e) => {
+  const leerInput = (e) => {
     setBuscador(e.target.value);
-  },[])
+  };
 
   return (
     <div className="container">
